@@ -4,11 +4,13 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link href="./output.css" rel="stylesheet">
+ 
+  
     <title>Document</title>
   </head>
-  <body>
+  <body class="bg-white">
     <!-- //navba -->
-    <nav class="flex items-center justify-between p-6 bg-gradient-to-r from-indigo-900 to-purple-900">
+    <nav class="flex items-center justify-between p-4 bg-gradient-to-r from-indigo-900 to-purple-900">
         <div class="flex items-center space-x-4">
             <span class="text-white text-lg font-bold">UDM LOGO</span>
         </div>
@@ -27,14 +29,61 @@
             </button>
         </div>
     </nav>
+
     <!-- //coursel -->
+    <div class="carousel w-full">
+        <div id="slide1" class="carousel-item relative w-full">
+          <img
+            src="./assets//carou1.png"
+            class="w-full" />
+          <div class="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
+            <a href="#slide4" class="btn btn-circle">❮</a>
+            <a href="#slide2" class="btn btn-circle">❯</a>
+          </div>
+        </div>
+        <div id="slide2" class="carousel-item relative w-full">
+          <img
+            src="./assets//carou2.png"
+            class="w-full" />
+          <div class="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
+            <a href="#slide1" class="btn btn-circle">❮</a>
+            <a href="#slide3" class="btn btn-circle">❯</a>
+          </div>
+        </div>
+        <div id="slide3" class="carousel-item relative w-full">
+          <img
+            src="./assets/carou3.png"
+            class="w-full" />
+          <div class="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
+            <a href="#slide2" class="btn btn-circle">❮</a>
+            <a href="#slide4" class="btn btn-circle">❯</a>
+          </div>
+        </div>
+        
+        </div>
+      </div>
+
+    <!-- ongoingcampaigns -->
+     <div class=" ml-20 mr-20 p-6">
+        <div class="text-black text-center">
+            Ongoing Campaigns
+        </div>
+        <div class="flex  justify-between pt-7 ">
+            <div class="campaign"><img src="./assets/Walmart_Index_Only.svg.png" alt=""></div>
+            <div class="campaign"><img src="./assets/cisco.svg.png" alt=""></div>
+            <div class="campaign"><img src="./assets/Volvo_Index_Only.svg.png" alt=""></div>
+            <div class="campaign"><img src="./assets/okta.svg.png" alt=""></div>
+            <div class="campaign"><img src="./assets/deloitte.svg.png" alt=""></div>
+
+        </div>
+     </div>
 
     <!-- footer  -->
-    <footer class="footer-border mx-2 mt-8 rounded-lg">
+    <footer class="footer-border text-black mx-2 mt-8 rounded-lg">
         <div class="bg-white p-6 rounded-lg">
           <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
             <div>
-              <img src="logo.png" alt="Logo" class="h-10">
+              <img src="./assets/themoms.png" alt="Logo" class="h-10">
               <p class="mt-4">A trusted market agency</p>
               <div class="social-icons flex mt-4 space-x-4">
                 <a href="#" class="text-gray-700 hover:text-gray-500"><i class="fab fa-facebook"></i></a>
@@ -69,12 +118,13 @@
             <div>
               <h5 class="font-bold">CONTACT</h5>
               <ul class="mt-2 space-y-2">
-                <li><a href="mailto:support@postpilot.com" class="hover:underline">support@postpilot.com</a></li>
+                <li><a href="mailto:support@postpilot.com" class="hover:underline ">
+                    <span><img src="./assets//email.png" class="inline-block " alt="img">support@postpilot.com</span></a></li>
                 <li>Made with <span class="text-red-500">&hearts;</span></li>
               </ul>
               <div class="flex mt-4 space-x-4">
-                <button class="btn btn-outline btn-primary ">Login</button>
-                <button class="btn btn-primary">Try it for free</button>
+                <button class="btn btn-accent ">Subscribe</button>  
+                   <button class="btn btn-primary">Try it for free</button>
               </div>
             </div>
           </div>

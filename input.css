@@ -1,7 +1,13 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
+body{
+    scroll-behavior: smooth;
+    
+}
+html {
+    scroll-padding-top: 120px; /* adjust this value to your liking */
+  }
 .colour{
     background: #48076A;
     

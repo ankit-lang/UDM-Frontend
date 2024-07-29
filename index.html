@@ -18,6 +18,12 @@
       font-size: 24px;
     }
   </style>
+
+  <script>
+    function resizeIframe(iframe) {
+        iframe.style.height = iframe.contentWindow.document.body.scrollHeight + 'px';
+    }
+  </script>
   
     <title>Document</title>
   </head>
@@ -134,60 +140,9 @@
        </div>
 
     <!-- footer  -->
-    <footer class="footer-border text-black mx-2  rounded-lg ">
-        <div class="bg-white p-6 rounded-lg">
-          <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
-            <div>
-              <img src="./assets/themoms.png" alt="Logo" class="h-10">
-              <p class="mt-4">A trusted market agency</p>
-              <div class="social-icons flex mt-4 space-x-4">
-                <a href="#" class="text-gray-700 hover:text-gray-500"><i class="fab fa-facebook"></i></a>
-                <a href="#" class="text-gray-700 hover:text-gray-500"><i class="fab fa-twitter"></i></a>
-                <a href="#" class="text-gray-700 hover:text-gray-500"><i class="fab fa-instagram"></i></a>
-                <a href="#" class="text-gray-700 hover:text-gray-500"><i class="fab fa-linkedin"></i></a>
-              </div>
-            </div>
-            <div class="md:col-span-2">
-              <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-                <div>
-                  <h5 class="font-bold">COMPANY</h5>
-                  <ul class="mt-2 space-y-2">
-                    <li><a href="#" class="hover:underline">About us</a></li>
-                    <li><a href="#" class="hover:underline">Partner program</a></li>
-                    <li><a href="#" class="hover:underline">Career</a></li>
-                    <li><a href="#" class="hover:underline">Contact us</a></li>
-                    <li><a href="#" class="hover:underline">Privacy Policy</a></li>
-                  </ul>
-                </div>
-                <div>
-                  <ul class="mt-2 space-y-2">
-                    <li><a href="#" class="hover:underline">Pricing</a></li>
-                    <li><a href="#" class="hover:underline">Reviews</a></li>
-                    <li><a href="#" class="hover:underline">Direct Mail Academy</a></li>
-                    <li><a href="#" class="hover:underline">Success stories</a></li>
-                    <li><a href="#" class="hover:underline">Terms & conditions</a></li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-            <div>
-              <h5 class="font-bold">CONTACT</h5>
-              <ul class="mt-2 space-y-2">
-                <li><a href="mailto:support@postpilot.com" class="hover:underline ">
-                    <span><img src="./assets//email.png" class="inline-block " alt="img">support@postpilot.com</span></a></li>
-                <li>Made with <span class="text-red-500">&hearts;</span></li>
-              </ul>
-              <div class="flex mt-4 space-x-4">
-                <button class="btn btn-accent ">Subscribe</button>  
-                   <button class="btn btn-primary">Try it for free</button>
-              </div>
-            </div>
-          </div>
-          <div class="mt-8 text-center border-t border-gray-200 pt-4">
-            <p>&copy; 2024 UDM, Inc. All rights reserved.</p>
-          </div>
-        </div>
-      </footer>
+    <div class="mt-4">
+      <iframe id="footer-iframe" src="lowerpart/footer.html" width="100%" frameborder="0" onload="resizeIframe(this)"></iframe>
+    </div>
 
   </body>
 </html>

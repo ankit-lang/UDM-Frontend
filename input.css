@@ -2,6 +2,17 @@
 @tailwind components;
 @tailwind utilities;
 
-body{
+.colour{
+    background: #48076A;
+    
+}
+.bgrnd{
+    background: #050038;
+    width: 63px;
+    height: 55.93px;
+
+    gap: 0px;
+    border-radius: 4.13px 0px 0px 0px;
+
     
 }

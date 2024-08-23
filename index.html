@@ -42,7 +42,8 @@
             <a href="#" class="text-white hover:text-gray-300">Branding</a>
         </div>
         <div class="flex items-center space-x-4">
-            <button class="px-4 py-2 border border-white text-white rounded-md hover:bg-white hover:text-indigo-900">Login</button>
+            <button class="px-4 py-2 border border-white text-white rounded-md hover:bg-white hover:text-indigo-900" onclick="showLogin()" >Login</button>
+            <button class="px-4 py-2 border border-white text-white rounded-md hover:bg-white hover:text-indigo-900" onclick="showSignup()" >Sign Up</button>
             <button class="px-4 py-2 bg-white text-indigo-900 rounded-md hover:bg-gray-200 flex items-center">
                 Get in Touch
                 <span class="mt-3">👋</span>
@@ -51,6 +52,89 @@
         </div>
         <div class="text-center text-white mt-2 text-3xl "><span class="bg-white w-7 font-bold rounded inline-block text-black " >C</span>onnecting You With <span class="font-extrabold">Brands</span> </div>
     </nav>
+
+
+    <div id="loginForm" class=" flex  absolute w-full h-full justify-center z-10 top-0 bg-white bglogin  ">
+        <div class=" ">
+           <div class="flex  absolute right-10 text-black">
+            <div class=" mr-5 font-bold bg-white m-5 p-2 rounded-xl  "><button>Contact</button></div>
+      <div class="mr-5 font-bold bg-white m-5 p-2 rounded-xl ">      <button onclick="showSignup()" >Sign Up</button></div>
+           </div>
+           <div class="   relative top-20 p-10 border-2 rounded-2xl">
+            <div class="font-bold text-center text-white text-2xl">YOUR LOGO</div>
+            <form class="ml-20 mr-20 mt-5" >
+          <h3 class="font-semibold  text-2xl text-white mb-2" >Log in</h3>
+            <label for="loginEmail" class="m-2 ml-0 text-white  inline-block" >Email address or Username:</label><br>
+            <input type="email" id="loginEmail"  class="bg-white w-72 text-black p-2 rounded " name="loginEmail"><br><br>
+            <label for="loginPassword" class="text-white  rounded inline-block m-2 ml-0 " >Password:</label><br>
+            <input type="password" id="loginPassword" class="bg-white text-black p-2 w-72 rounded  " name="loginPassword"><br><br>
+            <input type="checkbox"> &nbsp; <span class="text-white" >Remember me</span>
+            <div class="text-xs">By continuing, you agree to the <span class="underline" >Terms of use</span> and <span class="underline" >Privacy Policy.</span> </div>
+           <div class="bgbtnlogin  text-center mt-2 text-white p-2 rounded  "> <input type="submit" value="Login"></div>
+           <div class="text-center text-white text-xs mt-2">Forget Password?</div>
+           <div class="text-white mt-2 text-center">Dont have an account? <span class="underline hover:cursor-pointer font-semibold  " onclick="showSignup()"  >Sign Up</span>  </div>
+        </form>
+          </div>
+        </div>
+    </div>
+    <div id="signupForm" class=" hidd  flex  h-full  absolute w-full   justify-center z-10 top-0 bg-white bglogin  ">
+      <div class=" ">
+         <div class="flex  absolute right-10 text-black">
+          
+    <div class="mr-5 font-bold bg-white m-5 p-2 rounded-xl " onclick="showLogin()"  >      <button >Login</button></div>
+         </div>
+         <div class="   relative top-14 p-10 border-2   rounded-2xl">
+          <div class="font-bold text-center text-white text-2xl">YOUR LOGO</div>
+          <form class="mt-4 text-white " > 
+            <h3 class="font-semibold  text-2xl text-white mb-2" >Sign In <span class="w-16 inline-block" ><span  class="bg-purple-950  rounded-l-xl pl-5 pr-5" >Influencer</span><span class="rounded-r-xl pr-5 pl-5 bg-purple-700" >Admin</span> </span></h3>
+            <div class="flex space-x-4 mt-4 text-white mb-4">
+                <div class="w-1/2">
+                    <label class="block mb-2 text-sm">First name</label>
+                    <input type="text" class="w-full p-2 border border-gray-300 rounded-lg bg-white " placeholder="First name">
+                </div>
+                <div class="w-1/2">
+                    <label class="block mb-2 text-sm">Last name</label>
+                    <input type="text" class="w-full p-2 border border-gray-300 rounded-lg text-black bg-white" placeholder="Last name">
+                </div>
+            </div>
+            <div class="mb-4">
+                <label class="block mb-2 text-sm">Email address</label>
+                <input type="email" class="w-full p-2 border border-gray-300 rounded-lg text-black bg-white" placeholder="Email address">
+            </div>
+            <div class="mb-4">
+                <label class="block mb-2 text-sm">Password</label>
+                <div class="relative">
+                    <input type="password" class="w-full p-2 border border-gray-300 rounded-lg text-black bg-white" placeholder="Password">
+                    <span class="absolute right-2 top-2 text-gray-500 cursor-pointer">Hide</span>
+                </div>
+                <p class="mt-2 text-xs text-gray-400">Use 8 or more characters with a mix of letters, numbers & symbols</p>
+            </div>
+            <div class="flex space-x-4 mb-4">
+                <div class="w-1/2">
+                    <label class="block mb-2 text-sm">Username</label>
+                    <input type="text" class="w-full p-2 border border-gray-300 rounded-lg text-black bg-white " placeholder="Username">
+                </div>
+                <div class="w-1/2">
+                    <label class="block mb-2 text-sm">Phone No.</label>
+                    <input type="text" class="w-full p-2 border border-gray-300 rounded-lg text-black bg-white " placeholder="Phone No.">
+                </div>
+            </div>
+            <p class="text-xs text-gray-400 mb-4">
+                By creating an account, you agree to the 
+                <a href="#" class="text-blue-400">Terms of use</a> and 
+                <a href="#" class="text-blue-400">Privacy Policy</a>.
+            </p>
+            <button type="submit" class="w-full bg-purple-700 hover:bg-purple-600 text-white py-2 rounded-lg mb-4">
+                Create an account
+            </button>
+            <p class="text-center text-sm text-gray-400 mb-4">
+                Already have an account? <button onclick="showLogin()"   class="text-blue-400">Log in</button>
+            </p>
+           
+        </form>
+        </div>
+      </div>
+  </div>
 
     <!-- //coursel -->
     <div class="carousel  relative  w-full">
@@ -285,6 +369,17 @@
     <div class="mt-10">
       <iframe id="footer-iframe" src="lowerpart/footer.html" width="100%" frameborder="0" onload="resizeIframe(this)"></iframe>
     </div>
+    <script>
+         function showLogin() {
+            document.getElementById("loginForm").classList.remove("hidd");
+            document.getElementById("signupForm").classList.add("hidd");
+        }
+
+        function showSignup() {
+            document.getElementById("signupForm").classList.remove("hidd");
+            document.getElementById("loginForm").classList.add("hidd");
+        }
+    </script>
 
   </body>
 </html>

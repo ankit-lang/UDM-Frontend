@@ -27,4 +27,14 @@ html {
     font-weight: 700;
     /* font-style: normal; */
   }
-  
+  .hidd{
+    display: none;
+  }
+  .bglogin{
+    background: linear-gradient(287.56deg, #0F0C29 0%, #211C4E 0.01%, #4E2C67 50%, #24243E 100%);
+
+  }
+  .bgbtnlogin{
+    background: #2E2865;
+
+  }

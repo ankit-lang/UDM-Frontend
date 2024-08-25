@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Euphoria+Script&display=swap" rel="stylesheet">
+    <link href="./output.css" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <style>
+    .footer-border {
+      background: linear-gradient(to right, rgba(115, 31, 158, 1), rgba(16, 30, 155, 1));
+      padding: 2px;
+    }
+    .social-icons a {
+      font-size: 24px;
+    }
+    body {
+        font-family: 'Mulish', sans-serif;
+    }
+  </style>
+
+  <script>
+    function resizeIframe(iframe) {
+        iframe.style.height = iframe.contentWindow.document.body.scrollHeight + 'px';
+    }
+
+    function toggleTeamMember() {
+            const member1 = document.getElementById('team-member-1');
+            const member2 = document.getElementById('team-member-2');
+
+            if (member1.classList.contains('opacity-0')) {
+                member1.classList.remove('opacity-0');
+                member2.classList.add('opacity-0');
+            } else {
+                member1.classList.add('opacity-0');
+                member2.classList.remove('opacity-0');
+            }
+        }
+
+  </script>
+</head>
+<body class="bg-white">
+    <!--Navbar-->
+    <nav class="flex-col  items-center  p-4 bg-gradient-to-r from-indigo-900 to-purple-900">
+        <div class="flex justify-between">
+          <div class="flex items-center space-x-4">
+            <span class="text-white text-lg font-bold">UDM LOGO</span>
+        </div>
+        <div class=" md:flex space-x-8">
+            
+            <a href="#" class="py-2 text-white hover:underline">Home</a>
+            <a href="#" class="py-2 text-gray-300 hover:underline">About Us</a>
+            <a href="#" class="py-2 text-white hover:underline">Services</a>
+            <a href="#" class="py-2 text-white hover:underline">Branding</a>
+        </div>
+        <div class="flex items-center space-x-4">
+            <button class="px-4 py-2 border border-white text-white rounded-md hover:bg-white hover:text-indigo-900">Login</button>
+            <button class="px-4 py-2 bg-white text-indigo-900 rounded-md hover:bg-gray-200 flex items-center">
+                Get in Touch
+                <span class="mt-1">👋</span>
+            </button>
+        </div>
+        </div>
+    </nav>
+
+
+    <!-- First-->
+
+    <div class="text-gray-800 flex md:flex-row items-start justify-between p-8 bg-gray-100">
+        <!-- Left Section: Who we are -->
+        <div class="md:w-2/3">
+            <h2 class="text-3xl font-bold text-purple-900 mb-4 flex items-center">
+                <span class="bg-purple-900 text-white p-2 rounded-full">w</span>
+                <span>ho we are....</span>
+            </h2>
+            <p class="text-gray-700 leading-relaxed">
+                UDM Enterprises, a prominent brand-focused Unboxing Deals Marketing Agency, recognized the need for a dynamic and engaging online presence in an increasingly digital business landscape. With a commitment to elevating brands through innovative digital strategies, UDM aimed to create a virtual hub that not only showcased its core strengths, values, and services but also offered a seamless user experience. In a world where digital visibility and brand promotion are paramount, the development of a dynamic website was not just an option but a strategic imperative.
+            </p>
+        </div>
+        <!-- Right Section: Logo -->
+        <div class="md:w-1/3 mt-8 md:mt-0 flex justify-end">
+            <img src="./assets/image 58.png" alt="The Man Company" class="w-52">
+        </div>
+    </div>
+
+
+
+    <div class="container mx-auto py-8">
+        <!-- Header Section -->
+        <div class="text-center text-gray-600">
+            <h2 class="text-4xl font-bold">
+                <span class="text-white bg-purple-900 rounded-full px-3">O</span>UR TEAM...
+            </h2>
+            <p class="text-gray-600 mt-2">Subscribe to receive the latest news and updates about TDA. We promise not to spam you!</p>
+        </div>
+
+        <!-- Team Member Section -->
+        <div class="relative mt-10 max-w-xl mx-auto h-72">
+            <div id="team-member-1" class="flex items-center h-full p-6 bg-purple-900 text-white rounded-lg shadow-lg transition-opacity duration-500 ease-in-out">
+                <img src="https://via.placeholder.com/150" alt="Member Image" class="w-40 h-32 rounded-full mr-6">
+                <div>
+                    <h3 class="text-xl font-semibold">Rishabh Singh</h3>
+                    <p class="text-sm font-light">Founder@UDM, Manager</p>
+                    <p class="mt-4 text-sm">Recognized the need for a dynamic and engaging online presence in an increasingly digital business landscape. With a commitment to elevating brands through innovative digital strategies, UDM aimed to create a virtual hub that not only showcased its core strengths, values, and services but also offered a seamless user experience.</p>
+                </div>
+            </div>
+
+            <div id="team-member-2" class="flex items-center h-full p-6 bg-purple-900 text-white rounded-lg shadow-lg transition-opacity duration-500 ease-in-out opacity-0 absolute inset-0">
+                <img src="https://via.placeholder.com/150" alt="Member Image" class="w-40 h-32 rounded-full mr-6">
+                <div>
+                    <h3 class="text-xl font-semibold">Amit Patel</h3>
+                    <p class="text-sm font-light">Co-Founder@UDM, CTO</p>
+                    <p class="mt-4 text-sm">Amit Patel has been instrumental in spearheading the technological advancements at UDM. His vision for integrating cutting-edge technology with user-centric design has enabled UDM to stay ahead in the digital marketplace.</p>
+                </div>
+            </div>
+
+            <!-- Navigation Buttons -->
+            <button onclick="toggleTeamMember()" class="absolute top-1/2 left-[-40px] transform -translate-y-1/2 bg-purple-900 text-white rounded-full p-2">
+                &#8592;
+            </button>
+            <button onclick="toggleTeamMember()" class="absolute top-1/2 right-[-40px] transform -translate-y-1/2 bg-purple-900 text-white rounded-full p-2">
+                &#8594;
+            </button>
+        </div>
+    </div>
+
+
+
+    <!-- Last -->
+    <section class="flex flex-col items-center justify-center py-16 bg-gray-100">
+            <div class="font-bold    tracking-widest text-4xl ">
+                <h2 class="text-3xl font-bold text-gray-800 mb-4">Who we are 
+                <span class="colour inline-block transform -rotate-2 text-white p-1" >engaged</span> <span class="euphoria-script-regular text-6xl" >with...</span>
+            </div>
+        <p class="text-gray-600 text-center max-w-2xl mb-12">
+            We partner with humble, trusting leaders that think strategically. Businessmen and women who believe in the change they're making, embrace their mission and want to bring in a partner to accelerate their growth.
+        </p>
+        <div class="grid grid-cols-2 md:grid-cols-3 gap-8 items-center">
+            <!-- Add your images in place of the src attributes below -->
+            <img src="https://via.placeholder.com/150x50" alt="Swiss Beauty" class="mx-auto">
+            <img src="https://via.placeholder.com/150x50" alt="Dot & Key" class="mx-auto">
+            <img src="https://via.placeholder.com/150x50" alt="The Man Company" class="mx-auto">
+            <img src="https://via.placeholder.com/150x50" alt="Neeman's" class="mx-auto">
+            <img src="https://via.placeholder.com/150x50" alt="Nova Nova" class="mx-auto">
+            <img src="https://via.placeholder.com/150x50" alt="NU Republic" class="mx-auto">
+        </div>
+    </section>
+
+        
+        
+
+
+    <!--Footer-->
+    <div class="mt-10">
+        <iframe id="footer-iframe" src="lowerpart/footer.html" width="100%" frameborder="0" onload="resizeIframe(this)"></iframe>
+    </div>
+</body>
+</html>
